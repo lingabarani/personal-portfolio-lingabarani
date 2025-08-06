@@ -7,7 +7,7 @@ Welcome to my personal portfolio! 🚀
 This portfolio showcases my **projects, achievements, research work, and technical skills** in Computer Science, Machine Learning, and Data Science.  
 
 ## 🔗 Live Portfolio
-👉 [Visit My Portfolio](https://lingabarani.github.io/lingabarani-portfolio/)  
+👉 [Visit My Portfolio](https://lingabarani.github.io/personal-portfolio-lingabarani/)  
 
 ---
 
