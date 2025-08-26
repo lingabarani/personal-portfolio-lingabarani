@@ -1209,22 +1209,43 @@ Presented a paper at the National Level Inter-Collegiate Technical Meet “Tech 
         </section>
 
         <section class="contact-form">
+  <h3 class="h3 form-title">Contact Form</h3>
 
-          <h3 class="h3 form-title">Contact Form</h3>
+  <form id="contact-form" class="form">
+    <div class="input-wrapper">
+      <input type="text" name="fullname" class="form-input" placeholder="Full name" required>
+      <input type="email" name="email" class="form-input" placeholder="Email address" required>
+    </div>
 
-          <form action="#" class="form" data-form>
+    <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
 
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-          </form>
-        </section>
+    <button class="form-btn" type="submit">
+      <ion-icon name="paper-plane"></ion-icon>
+      <span>Send Message</span>
+    </button>
+  </form>
+</section>
+
+<!-- EmailJS Script -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("TPcUOfDEtyfVp-0qq"); // Your Public Key
+  })();
+
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_3pwqpjd", "template_7i4zqdg", this)
+      .then(function() {
+        alert("✅ Message sent successfully!");
+      }, function(error) {
+        alert("❌ Failed to send message. Try again later.");
+        console.log(error);
+      });
+  });
+</script>
+
       </article>
     </div>
   </main>
